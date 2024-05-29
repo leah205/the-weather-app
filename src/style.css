@@ -144,6 +144,24 @@ body {
 * {
     font-family: 'Roboto', sans-serif;
 }
+.loader {
+    position: absolute;
+    left: 45%;
+    font-size: 1.4rem;
+    color: rgb(49, 49, 49);
+    top: 40%;
+    width: 200px;
+    height: 100px;
+    box-shadow: -4px 4px 20px black;
+    background: rgb(222, 222, 222);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+.hidden {
+    display: none;
+}
 .city-search {
     width: 200px;
     margin: auto;
@@ -198,8 +216,8 @@ body {
     background: 0;
     border: 0;
     width: 50px;
-    color: black;
-    background: white;
+    color: white;
+    background: rgb(61, 61, 61);
     height: 50px;
     font-size: 1.5rem;
 }
@@ -218,8 +236,8 @@ body {
     background: rgb(204, 203, 203);
 }
 button.selected-measurement {
-    color: white;
-    background: rgb(61, 61, 61);
+    color: black;
+    background: white;
 }
 
 .weather-header {
@@ -251,7 +269,7 @@ button.selected-measurement {
 .current-weather-container {
     display: grid;
     grid-template-rows: 200px 200px;
-    grid-template-columns: repeat(4, 250px);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     column-gap: 50px;
     margin: auto;
     width: 1200px;
@@ -290,7 +308,7 @@ button.selected-measurement {
     padding: 10px 50px;
     height: 200px;
     gap: 20px;
-    width: 80vw;
+    width: 1000px;
     margin: auto;
     margin-top: 30px;
 }

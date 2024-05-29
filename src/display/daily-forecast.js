@@ -51,13 +51,13 @@ function displaySnowAndRain(data, container) {
     snowAndRainContainer.classList.add('snow-and-rain-container');
     const snowContainer = document.createElement('div');
     const snowText = document.createElement('p');
-    snowText.textContent = `:${data.daily_chance_of_snow}%`;
+    snowText.textContent = `${data.daily_chance_of_snow}%`;
     const snowIcon = document.createElement('img');
     snowIcon.src = snowUrl;
     const rainContainer = document.createElement('div');
     const rainIcon = document.createElement('img');
     const rainText = document.createElement('p');
-    rainText.textContent = `:${data.daily_chance_of_rain}%`;
+    rainText.textContent = `${data.daily_chance_of_rain}%`;
     rainIcon.src = rainUrl;
     snowContainer.appendChild(snowIcon);
     snowContainer.appendChild(snowText);

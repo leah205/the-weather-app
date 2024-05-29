@@ -8,6 +8,7 @@ import displayLocation from './display/location.js';
 import displayHourlyForecast from './display/hourly-forecast.js';
 import displayDailyForecast from './display/daily-forecast.js';
 import displayError from './display/error-display.js';
+import { showLoader, hideLoader } from './display/loader.js';
 
 const locationInput = document.querySelector('#location');
 const searchLocationBtn = document.querySelector('.search-btn');
@@ -22,6 +23,7 @@ function loadEventListeners() {
         });
     });
     searchLocationBtn.addEventListener('click', () => {
+        showLoader();
         triggerDisplay(locationInput.value);
     });
 }
@@ -30,8 +32,10 @@ function triggerDisplay(location) {
     return getForecast(location).then((result) => {
         if (result.error) {
             displayError();
+            hideLoader();
         } else {
             displayData(createCityWeather(result), location);
+            hideLoader();
         }
     });
 }

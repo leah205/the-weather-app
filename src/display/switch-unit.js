@@ -46,15 +46,17 @@ function updateHourlyForecast(newUnit, data) {
 
 function updateCurrentWeather(newUnit, data) {
     const tempValue = currentContainer.querySelector(
-        'div:nth-child(1) .content'
+        '.current-weather-container > div:nth-child(1) .content'
     );
     tempValue.textContent = `°${data[`temp_${newUnit}`]}`;
     const feelsLikeValue = currentContainer.querySelector(
-        'div:nth-child(3) .content'
+        '.current-weather-container > div:nth-child(3) .content'
     );
+    console.log(`°${data[`feelslike_${newUnit}`]}`);
+    // console.log(feelsLikeValue);
     feelsLikeValue.textContent = `°${data[`feelslike_${newUnit}`]}`;
     const windChillValue = currentContainer.querySelector(
-        'div:nth-child(8) .content'
+        '.current-weather-container > div:nth-child(8) .content'
     );
     windChillValue.textContent = `°${data[`windchill_${newUnit}`]}`;
 }

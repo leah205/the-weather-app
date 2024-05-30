@@ -278,7 +278,7 @@ button.selected-measurement {
 }
 .current-weather-container div {
     border-radius: 10px;
-    box-shadow: -2px 2px 7px rgb(50, 50, 50);
+    border: 5px solid white;
     color: white;
     border-radius: 10px;
     display: flex;

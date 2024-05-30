@@ -308,7 +308,7 @@ button.selected-measurement {
     padding: 10px 50px;
     height: 200px;
     gap: 20px;
-    width: 1000px;
+    width: 80vw;
     margin: auto;
     margin-top: 30px;
 }
